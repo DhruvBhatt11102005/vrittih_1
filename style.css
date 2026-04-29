@@ -627,6 +627,36 @@ footer::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; 
 
 .footer-bottom { border-top: 1px solid rgba(255,255,255,0.05); padding: 2rem 0; text-align: center; color: #8892b0; font-size: 0.95rem; }
 
+.developer-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+    vertical-align: middle;
+}
+
+.developer-link:hover {
+    color: var(--brand-cyan);
+}
+
+.rotating-logo {
+    height: 24px;
+    width: auto;
+    animation: slowRotate 8s linear infinite;
+    filter: brightness(1.2);
+}
+
+.developer-link:hover .rotating-logo {
+    animation: slowRotate 2s linear infinite;
+}
+
+@keyframes slowRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
 /* ==========================================================================
    ANIMATIONS & RESPONSIVE
    ========================================================================== */
